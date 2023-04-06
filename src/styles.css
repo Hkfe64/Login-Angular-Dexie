@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@layer base {
+  input {
+    @apply border border-slate-900 rounded;
+  }
+}
+@tailwind components;
+@tailwind utilities;
