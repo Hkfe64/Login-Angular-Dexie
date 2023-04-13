@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Login, Usuario } from 'src/app/shared';
@@ -8,7 +9,7 @@ const LS_CHAVE: string = 'usuarioLogado';
   providedIn: 'root',
 })
 export class LoginService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   public get usuarioLogado(): Usuario {
     let usu = localStorage[LS_CHAVE];
@@ -30,7 +31,8 @@ export class LoginService {
       login.senha,
       'Hugo'
     );
-    // TODO: Confirmar login aqui
+    // Buscar no backend o JWT do usuario.
+    // this.http.get();
 
     return of(usu);
   }

@@ -3,7 +3,11 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Login } from 'src/app/shared';
 import { LoginService } from '../services/login.service';
-
+import {
+  faFacebookF,
+  faInstagram,
+  faLinkedinIn,
+} from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,6 +18,10 @@ export class LoginComponent implements OnInit {
   login: Login = new Login();
   loading: boolean = false;
   message!: string;
+  //FA
+  faLinkedinIn = faLinkedinIn;
+  faFacebookF = faFacebookF;
+  faInstagram = faInstagram;
 
   constructor(
     private loginService: LoginService,
