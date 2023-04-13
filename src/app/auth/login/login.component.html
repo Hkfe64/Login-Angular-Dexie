@@ -30,13 +30,12 @@
           <div [hidden]="!senha?.errors?.['required']">Digite a senha</div>
         </div>
       </div>
-      <div>
-        <div>
-          <a href="#">Esqueceu sua senha?</a>
-        </div>
+      <div class="flex center p-2 w-full">
+        <a href="#">Esqueceu sua senha?</a>
       </div>
       <div>
         <button
+          class="flex center w-full"
           type="button"
           (click)="logar()"
           [disabled]="!formLogin.form.valid"
@@ -44,12 +43,10 @@
           <i class="fa fa-save" aria-hidden="true"></i> Logar
         </button>
       </div>
-      <div>
-        <div>
-          <div>
-            <a href="#">Criar conta</a>
-          </div>
-        </div>
+      <div class="flex center p-2 w-full">
+        <a href="#">Criar conta</a>
+      </div>
+      <div class="flex center p-2 gap-2">
         <div class="col-3">
           <a target="_blank" href="https://linkedin.com/company/atalayas">
             <i class="fab fa-linkedin-in" style="font-size: 16px"></i>
@@ -71,7 +68,5 @@
       </div>
     </form>
   </div>
-  <div class="col-span-3 grid place-items-center bg-teal-600">
-    <h1>Exiti</h1>
-  </div>
+  <div class="col-span-3 grid place-items-center bg-teal-600"></div>
 </main>

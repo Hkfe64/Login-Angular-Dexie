@@ -12,6 +12,9 @@
   input {
     @apply border border-slate-900 rounded;
   }
+  button {
+    @apply h-8 p-1 bg-teal-600 rounded;
+  }
 }
 @tailwind utilities;
 @layer utilities {
